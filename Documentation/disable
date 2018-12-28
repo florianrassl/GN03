@@ -1,0 +1,43 @@
+
+
+systemd-analyze  blame
+
+
+  3.698s systemd-logind.service
+          1.727s dev-mmcblk0p2.device
+           968ms systemd-udev-trigger.service
+           484ms systemd-timesyncd.service
+           283ms systemd-update-utmp.service
+           263ms sys-kernel-debug.mount
+           229ms systemd-modules-load.service
+           210ms systemd-user-sessions.service
+           209ms rc-local.service
+           207ms systemd-journald.service
+           206ms systemd-fsck-root.service
+           188ms systemd-udevd.service
+           179ms systemd-journal-flush.service
+           112ms systemd-tmpfiles-setup-dev.service
+           107ms systemd-sysusers.service
+            98ms systemd-random-seed.service
+            94ms systemd-tmpfiles-setup.service
+            89ms systemd-remount-fs.service
+            87ms tmp.mount
+            87ms systemd-sysctl.service
+            79ms systemd-update-utmp-runlevel.service
+            69ms var-tmp.mount
+
+
+
+systemctl disable systemd-timesyncd.service
+systemctl disable sys-kernel-debug.mount
+systemctl disable rc-local.service
+systemctl disable systemd-update-utmp.service
+systemctl mask systemd-logind.service
+#systemctl disable systemd-logind.service
+systemctl mask sys-kernel-debug.mount
+systemctl mask rc-local.service
+systemctl mask systemd-user-sessions.service
+systemctl mask systemd-update-utmp-runlevel.service
+systemctl mask systemd-journal-flush.service
+systemctl mask systemd-journald.service
+systemctl mask systemd-random-seed.service
