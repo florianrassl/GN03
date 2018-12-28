@@ -1,0 +1,10 @@
+https://linux-sunxi.org/Mainline_U-Boot#Compile_U-Boot
+
+make CROSS_COMPILE=arm-linux-gnueabihf- Cubieboard2_defconfig
+
+make CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
+
+make CROSS_COMPILE=arm-linux-gnueabihf-
+
+
+ dd if=u-boot-sunxi-with-spl.bin of=/dev/sdX bs=1024 seek=8

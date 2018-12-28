@@ -1,0 +1,18 @@
+https://linux-sunxi.org/Mainline_Kernel_Howto#Boot
+
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- sunxi_defconfig
+
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
+
+ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make zImage dtbs -j4
+
+ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=../../modules/ make modules modules_install
+
+
+bootlogo:
+bmptoppm ${PIC}/gn_boot.bmp > ${PIC}/gn_boot.ppm
+ppmquant 224 ${PIC}/gn_boot.ppm > ${PIC}/gn_boot_logo_224.ppm
+pnmnoraw ${PIC}/gn_boot_logo_224.ppm > ${PIC}/gn_boot_logo_ascii_224.ppm
+
+cp ${PIC}/gn_boot_logo_ascii_224.ppm ${SRCKERNEL}/drivers/video/logo/logo_linux_clut224.ppm
+

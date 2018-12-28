@@ -1,0 +1,8 @@
+#display timing:
+
+https://linux-sunxi.org/LCD
+
+uboot:
+
+5 zoll:
+CONFIG_VIDEO_LCD_MODE="x:640,y:480,depth:18,pclk_khz:51000,le:138,ri:20,up:22,lo:20,hs:20,vs:3,sync:3,vmode:0"

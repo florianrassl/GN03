@@ -1,0 +1,16 @@
+https://bootlin.com/blog/mali-opengl-support-on-allwinner-platforms-with-mainline-linux/
+
+
+git clone https://github.com/mripard/sunxi-mali.git
+cd sunxi-mali
+export CROSS_COMPILE=arm-linux-gnueabihf-
+export KDIR=~/GN03/kernel/linux-4.19
+export INSTALL_MOD_PATH=~/GN03/modules
+./build.sh -r r6p2 -b
+./build.sh -r r6p2 -i
+
+
+git clone https://github.com/bootlin/mali-blobs.git
+cd mali-blobs
+cp -a r6p2/fbdev/lib/lib_fb_dev/lib* $TARGET_DIR/usr/lib
+

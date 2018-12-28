@@ -1,0 +1,93 @@
+1.
+sudo debootstrap --verbose --arch armhf --variant=minbase --foreign testing ${ROOT}/ http://ftp.debian.org/debian
+chroot ${ROOT}
+sudo debootstrap --verbose --arch armhf --variant=minbase --foreign testing ${ROOT}/ http://ftp.debian.org/debian
+
+
+2. set host name
+echo GN > /etc/hostname
+
+
+3. install thinks 
+install:
+systemd
+sysvinit-core
+locales #dpkg-reconfigure locales
+udev
+sudo
+rsync
+libasound2
+libfreetype6
+libjpeg62-turbo
+libtiff5
+libgeotiff2
+libinput10
+liblua5.2-0
+libcurl4
+fonts-dejavu
+fonts-roboto
+fonts-droid-fallback
+fonts-freefont-ttf
+usbutils
+
+opt:
+vim
+htop
+iproute2
+wireless-tools
+wpasupplicant
+iputils-ping
+isc-dhcp-client
+network-manager
+kmod
+
+
+4. install res/files/*
+cp ${FILES}"/sudoers" ${ROOT}"/etc/sudoers"
+
+cp ${FILES}/*".rules" ${ROOT}"/lib/udev/rules.d/"
+cp ${FILES}"/sources.list" ${ROOT}"/etc/apt/sources.list"
+
+mkdir -p ${ROOT}"/etc/systemd/system/getty@tty1.service.d"
+cp -r ${FILES}"/autologin.conf" ${ROOT}"/etc/systemd/system/getty@tty1.service.d/autologin.conf"
+
+cp ${FILES}"/profile" ${ROOT}"/home/rbe/.profile"
+cp ${FILES}"/GN01-Update.sh" ${ROOT}"/home/rbe/GN01-Update.sh"
+chmod +x ${ROOT}"/home/rbe/GN01-Update.sh"
+
+
+5. edit /etc/hosts insert..
+127.0.0.1	localhost
+127.0.0.1	GN
+
+
+6. add user
+passwd
+adduser rbe
+adduser admin
+usermod -aG sudo admin
+usermod -aG sudo rbe
+usermod -aG dialout rbe
+usermod -aG video rbe
+addgroup mice
+usermod -aG mice rbe
+
+
+7. install fstab
+cat <<EOT > ${ROOT}/etc/fstab
+/dev/mmcblk0p2  /   ext4  defaults,sync  0 1
+tmpfs /tmp  tmpfs defaults  0 0
+tmpfs /var/tmp  tmpfs defaults  0 0
+# if you have a separate boot partition
+#/dev/mmcblk0p1 /boot   vfat defaults 0 0 
+EOT
+
+
+8. install modules
+cp -r  modules/* root/
+
+
+9. install libgl libgles
+cp ../mali/mali-blobs/r6p2/arm/fbdev/* root/usr/lib/
+
+
