@@ -81,6 +81,7 @@ kernel/drivers/input/evdev.ko
 kernel/drivers/input/keyboard/atkbd.ko
 kernel/drivers/input/keyboard/sun4i-lradc-keys.ko
 kernel/drivers/input/misc/axp20x-pek.ko
+kernel/drivers/input/touchscreen/of_touchscreen.ko
 kernel/drivers/input/serio/serio.ko
 kernel/drivers/input/serio/serport.ko
 kernel/drivers/input/serio/libps2.ko
@@ -94,7 +95,6 @@ kernel/drivers/mmc/core/pwrseq_simple.ko
 kernel/drivers/mmc/core/pwrseq_emmc.ko
 kernel/drivers/mmc/core/mmc_block.ko
 kernel/drivers/mmc/host/sunxi-mmc.ko
-kernel/drivers/net/phy/mdio-bus.ko
 kernel/drivers/phy/allwinner/phy-sun4i-usb.ko
 kernel/drivers/pps/pps_core.ko
 kernel/drivers/ptp/ptp.ko
@@ -122,6 +122,8 @@ kernel/drivers/usb/host/ohci-platform.ko
 kernel/drivers/usb/musb/musb_hdrc.ko
 kernel/drivers/usb/musb/sunxi.ko
 kernel/drivers/usb/phy/phy-generic.ko
+kernel/drivers/usb/storage/uas.ko
+kernel/drivers/usb/storage/usb-storage.ko
 kernel/drivers/video/fbdev/core/fb.ko
 kernel/drivers/video/fbdev/core/cfbfillrect.ko
 kernel/drivers/video/fbdev/core/cfbcopyarea.ko

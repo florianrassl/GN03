@@ -30,6 +30,9 @@ fonts-droid-fallback
 fonts-freefont-ttf
 usbutils
 
+//not testetd
+usb-modeswitch
+
 opt:
 vim
 htop
