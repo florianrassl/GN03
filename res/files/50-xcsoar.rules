@@ -1,0 +1,4 @@
+#rechte korigiren um xcsoare ohne root rechte ausfüren zu können
+KERNEL=="mice", SUBSYSTEMS=="input" , GROUP="mice" , MODE="660"
+KERNEL=="mouse[0-9]", SUBSYSTEMS=="input" , GROUP="mice" , MODE="660"
+KERNEL=="event[0-9]", SUBSYSTEMS=="input" , GROUP="mice" , MODE="660"
