@@ -1,7 +1,8 @@
-./root
-./xcsore
-./uboot
-./mali
-./cubie
-./boot.log
-./GN035Z.img
+root/
+xcsore/
+uboot/
+kernel/
+mali/
+cubie/
+boot.log
+GN035Z.img
