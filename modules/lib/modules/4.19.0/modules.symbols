@@ -67,6 +67,7 @@ alias symbol:cfg80211_mgmt_tx_status cfg80211
 alias symbol:phy_unregister_fixup_for_uid libphy
 alias symbol:phy_mii_ioctl libphy
 alias symbol:efuse_shadow_read rtlwifi
+alias symbol:snd_rawmidi_info_select snd_rawmidi
 alias symbol:usb_serial_generic_submit_read_urbs usbserial
 alias symbol:wiphy_rfkill_stop_polling cfg80211
 alias symbol:ieee80211_gtk_rekey_notify mac80211
@@ -80,6 +81,9 @@ alias symbol:rtl_rx_ampdu_apply rtlwifi
 alias symbol:usbnet_set_msglevel usbnet
 alias symbol:ieee80211_get_response_rate cfg80211
 alias symbol:rtl_deinit_deferred_work rtlwifi
+alias symbol:snd_rawmidi_kernel_release snd_rawmidi
+alias symbol:snd_hwdep_new snd_hwdep
+alias symbol:snd_rawmidi_transmit_empty snd_rawmidi
 alias symbol:ieee80211_radar_detected mac80211
 alias symbol:mdiobus_get_phy libphy
 alias symbol:rtl_c2hcmd_enqueue rtlwifi
@@ -145,6 +149,7 @@ alias symbol:mdiobus_free libphy
 alias symbol:rtl_cam_reset_all_entry rtlwifi
 alias symbol:rtl_evm_db_to_percentage rtlwifi
 alias symbol:rtl_lps_enter rtlwifi
+alias symbol:snd_rawmidi_output_params snd_rawmidi
 alias symbol:l2cap_conn_put bluetooth
 alias symbol:bt_sock_ioctl bluetooth
 alias symbol:hci_unregister_cb bluetooth
@@ -184,6 +189,7 @@ alias symbol:rtl92c_dm_init_rate_adaptive_mask rtl8192c_common
 alias symbol:ieee80211_scan_completed mac80211
 alias symbol:cfg80211_cac_event cfg80211
 alias symbol:l2cap_is_socket bluetooth
+alias symbol:snd_rawmidi_transmit_peek snd_rawmidi
 alias symbol:usb_serial_generic_chars_in_buffer usbserial
 alias symbol:dev_attr_usbip_debug usbip_core
 alias symbol:usbnet_write_cmd_async usbnet
@@ -232,6 +238,7 @@ alias symbol:phy_lookup_setting libphy
 alias symbol:ieee80211_tkip_add_iv mac80211
 alias symbol:eeprom_93cx6_write eeprom_93cx6
 alias symbol:mali_set_user_setting mali
+alias symbol:snd_rawmidi_transmit_ack snd_rawmidi
 alias symbol:usb_serial_register_drivers usbserial
 alias symbol:cfg80211_get_p2p_attr cfg80211
 alias symbol:ieee80211_iter_chan_contexts_atomic mac80211
@@ -252,6 +259,7 @@ alias symbol:rtl92c_phy_query_bb_reg rtl8192c_common
 alias symbol:rtl92c_phy_set_txpower_level rtl8192c_common
 alias symbol:genphy_c45_read_link libphy
 alias symbol:phy_speed_up libphy
+alias symbol:snd_rawmidi_set_ops snd_rawmidi
 alias symbol:rtl92c_dm_rf_saving rtl8192c_common
 alias symbol:_rtl92c_phy_dbm_to_txpwr_idx rtl8192c_common
 alias symbol:hci_alloc_dev bluetooth
@@ -288,6 +296,7 @@ alias symbol:ieee80211_tdls_oper_request mac80211
 alias symbol:mii_check_gmii_support mii
 alias symbol:usbnet_status_stop usbnet
 alias symbol:usbip_recv_iso usbip_core
+alias symbol:snd_usbmidi_suspend snd_usbmidi_lib
 alias symbol:__mdiobus_read libphy
 alias symbol:phy_ethtool_get_wol libphy
 alias symbol:wiphy_apply_custom_regulatory cfg80211
@@ -301,6 +310,7 @@ alias symbol:bt_sock_stream_recvmsg bluetooth
 alias symbol:genphy_c45_read_lpa libphy
 alias symbol:cfg80211_connect_done cfg80211
 alias symbol:phy_resolve_aneg_linkmode libphy
+alias symbol:snd_usbmidi_input_stop snd_usbmidi_lib
 alias symbol:__cfg80211_send_event_skb cfg80211
 alias symbol:phy_duplex_to_str libphy
 alias symbol:ieee80211_get_tkip_p1k_iv mac80211
@@ -309,6 +319,7 @@ alias symbol:of_phy_register_fixed_link of_mdio
 alias symbol:rtl_process_phyinfo rtlwifi
 alias symbol:ieee80211_alloc_hw_nm mac80211
 alias symbol:usbnet_probe usbnet
+alias symbol:__snd_rawmidi_transmit_ack snd_rawmidi
 alias symbol:ieee80211_beacon_get_tim mac80211
 alias symbol:hci_set_hw_info bluetooth
 alias symbol:cdc_ncm_unbind cdc_ncm
@@ -318,6 +329,7 @@ alias symbol:usb_serial_handle_break usbserial
 alias symbol:phy_ethtool_set_link_ksettings libphy
 alias symbol:usbnet_unlink_rx_urbs usbnet
 alias symbol:mali_perf_set_num_pp_cores mali
+alias symbol:snd_usbmidi_resume snd_usbmidi_lib
 alias symbol:l2cap_chan_create bluetooth
 alias symbol:ieee80211_register_hw mac80211
 alias symbol:rtl_deinit_core rtlwifi
@@ -362,6 +374,7 @@ alias symbol:cfg80211_report_wowlan_wakeup cfg80211
 alias symbol:phy_disconnect libphy
 alias symbol:rtl_swlps_beacon rtlwifi
 alias symbol:mdiobus_read libphy
+alias symbol:snd_rawmidi_kernel_open snd_rawmidi
 alias symbol:ieee80211_rts_duration mac80211
 alias symbol:phy_stop_interrupts libphy
 alias symbol:phy_connect libphy
@@ -461,12 +474,14 @@ alias symbol:gf128mul_lle gf128mul
 alias symbol:ieee80211_enable_rssi_reports mac80211
 alias symbol:cfg80211_new_sta cfg80211
 alias symbol:rtl_cmd_send_packet rtlwifi
+alias symbol:snd_rawmidi_drain_output snd_rawmidi
 alias symbol:rtl_tx_ackqueue rtlwifi
 alias symbol:hci_get_route bluetooth
 alias symbol:ieee80211_iterate_active_interfaces_atomic mac80211
 alias symbol:rtl_cam_add_one_entry rtlwifi
 alias symbol:phy_set_max_speed libphy
 alias symbol:ieee80211_ap_probereq_get mac80211
+alias symbol:snd_rawmidi_kernel_write snd_rawmidi
 alias symbol:usbip_dump_urb usbip_core
 alias symbol:rtl_dm_diginit rtlwifi
 alias symbol:phy_device_free libphy
@@ -484,6 +499,7 @@ alias symbol:ieee80211_pspoll_get mac80211
 alias symbol:cfg80211_del_sta_sinfo cfg80211
 alias symbol:regulatory_hint cfg80211
 alias symbol:phy_ethtool_set_eee libphy
+alias symbol:__snd_rawmidi_transmit_peek snd_rawmidi
 alias symbol:usbnet_cdc_bind cdc_ether
 alias symbol:cfg80211_chandef_valid cfg80211
 alias symbol:ieee80211_cqm_beacon_loss_notify mac80211
@@ -510,6 +526,7 @@ alias symbol:phy_driver_unregister libphy
 alias symbol:rtlwifi_rate_mapping rtlwifi
 alias symbol:usbip_pad_iso usbip_core
 alias symbol:cfg80211_sched_scan_results cfg80211
+alias symbol:snd_rawmidi_drop_output snd_rawmidi
 alias symbol:usbnet_defer_kevent usbnet
 alias symbol:hci_register_dev bluetooth
 alias symbol:ieee80211_iter_keys mac80211
@@ -523,6 +540,7 @@ alias symbol:cfg80211_auth_timeout cfg80211
 alias symbol:rtl_send_smps_action rtlwifi
 alias symbol:genphy_c45_pma_setup_forced libphy
 alias symbol:cfg80211_ch_switch_started_notify cfg80211
+alias symbol:snd_usbmidi_disconnect snd_usbmidi_lib
 alias symbol:ieee80211_txq_get_depth mac80211
 alias symbol:rtl92c_phy_rf_config rtl8192c_common
 alias symbol:cfg80211_free_nan_func cfg80211
@@ -535,6 +553,7 @@ alias symbol:_rtl92c_phy_txpwr_idx_to_dbm rtl8192c_common
 alias symbol:usbnet_resume_rx usbnet
 alias symbol:phy_drivers_register libphy
 alias symbol:rtl92c_set_fw_rsvdpagepkt rtl8192c_common
+alias symbol:snd_rawmidi_transmit snd_rawmidi
 alias symbol:ieee80211_amsdu_to_8023s cfg80211
 alias symbol:genphy_c45_an_disable_aneg libphy
 alias symbol:rtl_fw_cb rtlwifi
@@ -548,6 +567,7 @@ alias symbol:phy_device_remove libphy
 alias symbol:genphy_c45_restart_aneg libphy
 alias symbol:cfg80211_chandef_create cfg80211
 alias symbol:rtl_cam_get_free_entry rtlwifi
+alias symbol:snd_rawmidi_kernel_read snd_rawmidi
 alias symbol:ieee80211_start_tx_ba_session mac80211
 alias symbol:cfg80211_tdls_oper_request cfg80211
 alias symbol:rtl92c_fill_h2c_cmd rtl8192c_common
@@ -577,9 +597,11 @@ alias symbol:mdio_device_free libphy
 alias symbol:__mdiobus_register libphy
 alias symbol:bt_sock_poll bluetooth
 alias symbol:crypto_ecdh_key_len ecdh_generic
+alias symbol:snd_rawmidi_receive snd_rawmidi
 alias symbol:__hci_cmd_send bluetooth
 alias symbol:ieee80211_stop_queue mac80211
 alias symbol:usbip_in_eh usbip_core
+alias symbol:snd_usbmidi_input_start snd_usbmidi_lib
 alias symbol:bt_sock_wait_state bluetooth
 alias symbol:cfg80211_pmksa_candidate_notify cfg80211
 alias symbol:phy_start libphy
@@ -593,9 +615,12 @@ alias symbol:rtl_ps_enable_nic rtlwifi
 alias symbol:rtl92c_phy_update_txpower_dbm rtl8192c_common
 alias symbol:usbnet_purge_paused_rxq usbnet
 alias symbol:bt_sock_unlink bluetooth
+alias symbol:snd_rawmidi_input_params snd_rawmidi
 alias symbol:phy_reset_after_clk_enable libphy
 alias symbol:hci_mgmt_chan_register bluetooth
 alias symbol:cfg80211_vendor_cmd_reply cfg80211
+alias symbol:__snd_usbmidi_create snd_usbmidi_lib
+alias symbol:snd_rawmidi_new snd_rawmidi
 alias symbol:usbnet_suspend usbnet
 alias symbol:rtl_hal_pwrseqcmdparsing rtlwifi
 alias symbol:mdiobus_alloc_size libphy
@@ -638,6 +663,7 @@ alias symbol:mdiobus_write_nested libphy
 alias symbol:usbnet_skb_return usbnet
 alias symbol:rtl92c_dm_init rtl8192c_common
 alias symbol:eeprom_93cx6_multireadb eeprom_93cx6
+alias symbol:snd_rawmidi_drain_input snd_rawmidi
 alias symbol:rtl92ce_phy_set_rf_on rtl8192c_common
 alias symbol:rtl92c_set_fw_pwrmode_cmd rtl8192c_common
 alias symbol:rtl_usb_suspend rtl_usb

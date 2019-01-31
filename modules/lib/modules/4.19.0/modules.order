@@ -41,6 +41,10 @@ kernel/drivers/input/touchscreen/usbtouchscreen.ko
 kernel/drivers/of/of_mdio.ko
 kernel/drivers/staging/rtl8712/r8712u.ko
 kernel/drivers/staging/rtl8188eu/r8188eu.ko
+kernel/sound/core/snd-hwdep.ko
+kernel/sound/core/snd-rawmidi.ko
+kernel/sound/usb/snd-usb-audio.ko
+kernel/sound/usb/snd-usbmidi-lib.ko
 kernel/net/wireless/cfg80211.ko
 kernel/net/wireless/lib80211.ko
 kernel/net/wireless/lib80211_crypt_wep.ko
