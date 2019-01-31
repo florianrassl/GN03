@@ -1,0 +1,14 @@
+[Unit]
+Description=PWM
+After=systemd-udev-trigger.service
+
+[Service]
+Type=simple
+ExecStart=/opt/pwm start
+ExesStop=/opt/pwm stop
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
+

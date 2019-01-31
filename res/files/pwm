@@ -1,0 +1,35 @@
+#!/bin/bash -e
+
+PWM_SAVE=/home/rbe/pwm_save.txt
+PWMCHIP=/sys/devices/platform/soc@1c00000/1c20e00.pwm/pwm/pwmchip0
+PWM_NR=0
+PWM=${PWMCHIP}/pwm$PWM_NR
+PWM_PERIOD=25000
+PWM_DUTY_CYCLE=$(cat $PWM_SAVE)
+
+case "$1" in
+start)
+  if [ $PWM_DUTY_CYCLE -gt $PWM_PERIOD ]; then
+    PWM_DUTY_CYCLE=0
+  fi
+  if [ ! -d $PWM ]; then
+    echo "$PWM_NR" > "${PWMCHIP}/export"
+  fi
+  echo "$PWM_PERIOD" > "${PWM}/period"
+  echo "$PWM_DUTY_CYCLE" > "${PWM}/duty_cycle"
+  echo "1" > "${PWM}/enable"
+  chmod 666 "${PWM}/duty_cycle"
+;;
+stop)
+  if [ -e $PWM ]; then
+    echo "$PWM_PERIOD" > "${PWM}/duty_cycle"
+    cat "${PWM}/duty_cycle" > $PWM_SAVE
+  fi
+;;
+*)
+  echo "Usage: $0 {start|stop}" >&2
+  exit 1
+;;
+esac
+
+exit 0
