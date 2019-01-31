@@ -29,6 +29,7 @@ fonts-roboto
 fonts-droid-fallback
 fonts-freefont-ttf
 usbutils
+alsa-utils
 
 //not testetd
 usb-modeswitch
