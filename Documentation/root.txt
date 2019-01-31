@@ -58,6 +58,8 @@ cp ${FILES}"/profile" ${ROOT}"/home/rbe/.profile"
 cp ${FILES}"/GN01-Update.sh" ${ROOT}"/home/rbe/GN01-Update.sh"
 chmod +x ${ROOT}"/home/rbe/GN01-Update.sh"
 
+cp ${FILES}"/pwm ${ROOT}" /opt/"
+cp ${FILES}"/pwm.service" /usr/lib/systemd/system/
 
 5. edit /etc/hosts insert..
 127.0.0.1	localhost
@@ -89,8 +91,10 @@ EOT
 8. install modules
 cp -r  modules/* root/
 
-
+#maybe not needed
 9. install libgl libgles
 cp ../mali/mali-blobs/r6p2/arm/fbdev/* root/usr/lib/
 
+10. activate pwm
+systemctl enable pwm
 
