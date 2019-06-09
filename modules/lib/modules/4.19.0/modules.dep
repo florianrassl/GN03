@@ -32,23 +32,68 @@ kernel/drivers/net/usb/cdc_subset.ko: kernel/drivers/net/usb/usbnet.ko kernel/dr
 kernel/drivers/net/usb/zaurus.ko: kernel/drivers/net/usb/cdc_ether.ko kernel/drivers/net/usb/usbnet.ko kernel/drivers/net/mii.ko
 kernel/drivers/net/usb/usbnet.ko: kernel/drivers/net/mii.ko
 kernel/drivers/net/usb/cdc_ncm.ko: kernel/drivers/net/usb/usbnet.ko kernel/drivers/net/mii.ko
+kernel/drivers/usb/misc/ezusb.ko:
 kernel/drivers/usb/class/cdc-wdm.ko:
 kernel/drivers/usb/serial/usbserial.ko:
+kernel/drivers/usb/serial/aircable.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/ark3116.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/belkin_sa.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/ch341.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/cp210x.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/cyberjack.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/cypress_m8.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/usb_debug.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/digi_acceleport.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/io_edgeport.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/io_ti.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/empeg.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/f81232.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/f81534.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/ftdi_sio.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/garmin_gps.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/ipaq.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/ipw.ko: kernel/drivers/usb/serial/usb_wwan.ko kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/ir-usb.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/iuu_phoenix.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/keyspan.ko: kernel/drivers/usb/misc/ezusb.ko kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/keyspan_pda.ko: kernel/drivers/usb/misc/ezusb.ko kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/kl5kusb105.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/kobil_sct.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/mct_u232.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/metro-usb.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/mos7720.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/mos7840.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/mxuport.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/navman.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/omninet.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/opticon.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/option.ko: kernel/drivers/usb/serial/usb_wwan.ko kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/oti6858.ko: kernel/drivers/usb/serial/usbserial.ko
 kernel/drivers/usb/serial/pl2303.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/qcaux.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/qcserial.ko: kernel/drivers/usb/serial/usb_wwan.ko kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/quatech2.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/safe_serial.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/sierra.ko: kernel/drivers/usb/serial/usbserial.ko
 kernel/drivers/usb/serial/usb-serial-simple.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/spcp8x5.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/ssu100.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/symbolserial.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/usb_wwan.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/ti_usb_3410_5052.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/upd78f0730.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/visor.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/wishbone-serial.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/whiteheat.ko: kernel/drivers/usb/misc/ezusb.ko kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/xsens_mt.ko: kernel/drivers/usb/serial/usbserial.ko
 kernel/drivers/usb/usbip/usbip-core.ko:
 kernel/drivers/input/touchscreen/usbtouchscreen.ko:
 kernel/drivers/of/of_mdio.ko: kernel/drivers/net/phy/fixed_phy.ko kernel/drivers/net/phy/libphy.ko
 kernel/drivers/staging/rtl8712/r8712u.ko:
 kernel/drivers/staging/rtl8188eu/r8188eu.ko: kernel/net/wireless/lib80211.ko kernel/net/wireless/cfg80211.ko
-kernel/sound/core/snd-hwdep.ko:
-kernel/sound/core/snd-rawmidi.ko:
-kernel/sound/usb/snd-usb-audio.ko: kernel/sound/core/snd-hwdep.ko kernel/sound/usb/snd-usbmidi-lib.ko kernel/sound/core/snd-rawmidi.ko
-kernel/sound/usb/snd-usbmidi-lib.ko: kernel/sound/core/snd-rawmidi.ko
 kernel/net/wireless/cfg80211.ko:
 kernel/net/wireless/lib80211.ko:
 kernel/net/wireless/lib80211_crypt_wep.ko: kernel/net/wireless/lib80211.ko
 kernel/net/wireless/lib80211_crypt_ccmp.ko: kernel/net/wireless/lib80211.ko
 kernel/net/bluetooth/bluetooth.ko: kernel/crypto/ecdh_generic.ko
 kernel/net/mac80211/mac80211.ko: kernel/net/wireless/cfg80211.ko
-extra/mali.ko:
