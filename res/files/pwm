@@ -22,8 +22,8 @@ start)
 ;;
 stop)
   if [ -e $PWM ]; then
+    #cat "${PWM}/duty_cycle" > $PWM_SAVE
     echo "$PWM_PERIOD" > "${PWM}/duty_cycle"
-    cat "${PWM}/duty_cycle" > $PWM_SAVE
   fi
 ;;
 *)
